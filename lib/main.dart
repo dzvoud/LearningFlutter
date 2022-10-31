@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,6 +19,9 @@ class MyApp extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
               children:  [
+                SvgPicture.asset("assets/img/fluticon.svg",
+                // color: Colors.blue
+                ),
                 Image.asset('assets/img/pp.png',
                 height: 200 ,
                 width: 200,),
