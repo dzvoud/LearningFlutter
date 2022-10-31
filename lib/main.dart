@@ -5,7 +5,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({ Key? key }) : super(key: key);
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,14 +14,31 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Title of App"),
         ),
-        body: const Center(
-          child: Text("Element for body",
-            style: TextStyle(
-              fontSize: 24,
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+              children:  [
+                Image.asset('assets/img/pp.png',
+                height: 200 ,
+                width: 200,),
+                const Text(
+                  "Element for body",
+                  style: TextStyle(
+                    fontSize: 42,
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
+                const Text("Second element for body with too many text for app",
+                style: TextStyle(
+                  fontSize: 24,
+                ),
+                textAlign: TextAlign.center,
+                )
+              ],
             ),
-            ),
-        ),
-        ),
+        )
+      ),
     );
   }
 }
