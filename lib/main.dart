@@ -1,20 +1,28 @@
+import 'package:flame/flame.dart';
+import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
-import 'home_page.dart';
 
-void main() {
+import 'game_manager.dart';
+
+void main(){
+  WidgetsFlutterBinding.ensureInitialized();
+
+  Flame.device.fullScreen();
+  // Flame.device.setLandscape();
+
   runApp(const MyApp());
+
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage(),
+      title: "Space Shooter",
+      debugShowCheckedModeBanner:  false,
+      home:GameWidget(game: GameManager()),
     );
   }
 }
-
-
-
